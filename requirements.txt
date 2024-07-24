@@ -1,0 +1,6 @@
+# docx2text
+ipykernel
+python-dotenv
+llama-index
+llama-index-vector-stores-qdrant
+qdrant_client
