@@ -17,10 +17,7 @@ md_docs = FlatReader().load_data(Path("./data/optisol_info.md"))
 parser = MarkdownNodeParser()
 nodes = parser.get_nodes_from_documents(md_docs)
 
-
 client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
-
-# print(client.get_collections())
 
 
 def create_index(nodes, colection_name):
