@@ -1,3 +1,7 @@
 venv
 .env
-data/*
+data/*.txt
+data/optisol_info.md
+
+
+qdrant_storage
