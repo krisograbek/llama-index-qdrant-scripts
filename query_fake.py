@@ -1,22 +1,26 @@
-from llama_index.core import VectorStoreIndex, Settings
-from llama_index.vector_stores.qdrant import QdrantVectorStore
-from llama_index.llms.openai import OpenAI
-from llama_index.core.retrievers import VectorIndexRetriever
-from llama_index.core.query_engine import RetrieverQueryEngine
-
-from qdrant_client import QdrantClient
-
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
+
+from llama_index.core import Settings
+from llama_index.llms.openai import OpenAI
+
 llm = OpenAI(model="gpt-4o-mini", temperature=0.1)
+Settings.llm = llm
+
+
+from llama_index.vector_stores.qdrant import QdrantVectorStore
+from qdrant_client import QdrantClient
+
+# Qdrant parameters
 client = QdrantClient(url="http://localhost:6333")
 collection_name = "FakeCompany"
 
-Settings.llm = llm
 
+from llama_index.core import VectorStoreIndex
+from llama_index.core.retrievers import VectorIndexRetriever
+from llama_index.core.query_engine import RetrieverQueryEngine
 
 ### Loading existing store index
 vector_store = QdrantVectorStore(collection_name, client=client)
