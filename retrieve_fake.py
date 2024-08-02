@@ -4,7 +4,6 @@ from llama_index.vector_stores.qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
 from llama_index.core import VectorStoreIndex
 from llama_index.core.retrievers import VectorIndexRetriever
-from llama_index.core.query_engine import RetrieverQueryEngine
 
 from dotenv import load_dotenv
 
@@ -25,15 +24,15 @@ vector_store = QdrantVectorStore(collection_name, client=client)
 index = VectorStoreIndex.from_vector_store(vector_store)
 
 ### Index to chat engine
-retriever = VectorIndexRetriever(index)
-query_engine = RetrieverQueryEngine(retriever=retriever)
-
+retriever = VectorIndexRetriever(index, similarity_top_k=4)
 
 if __name__ == "__main__":
-    response = query_engine.query(
+    response = retriever.retrieve(
         "How does the RoboFlex Series cater to both industrial and domestic markets?"
     )
-    print(response.response)
+    for node in response:
+        print(node.text)
+        print("--" * 25)
 
 # def show_rag_nodes(source_nodes):
 #     for node in source_nodes:

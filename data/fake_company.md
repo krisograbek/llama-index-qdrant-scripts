@@ -61,19 +61,19 @@ Stock Symbol: FTI (NASDAQ)
    - Target Markets: Retail chains, e-commerce platforms, supermarkets.
 
 10. FinSmart
-   - Description: Financial analysis and risk management software.
-   - Key Features: Predictive analytics, fraud detection, investment portfolio optimization.
-   - Target Markets: Banks, financial institutions, insurance companies.
+    - Description: Financial analysis and risk management software.
+    - Key Features: Predictive analytics, fraud detection, investment portfolio optimization.
+    - Target Markets: Banks, financial institutions, insurance companies.
 
 11. CityGrid
-   - Description: Smart city infrastructure management platform.
-   - Key Features: Traffic management, energy distribution, public safety monitoring.
-   - Target Markets: Municipalities, urban planners, government agencies.
+    - Description: Smart city infrastructure management platform.
+    - Key Features: Traffic management, energy distribution, public safety monitoring.
+    - Target Markets: Municipalities, urban planners, government agencies.
 
 12. LogiTrack
-   - Description: AI-powered logistics and supply chain management system.
-   - Key Features: Real-time tracking, demand forecasting, route optimization.
-   - Target Markets: Logistics companies, e-commerce businesses, manufacturing firms.
+    - Description: AI-powered logistics and supply chain management system.
+    - Key Features: Real-time tracking, demand forecasting, route optimization.
+    - Target Markets: Logistics companies, e-commerce businesses, manufacturing firms.
 
 13. HomeSmart
     - Description: Comprehensive smart home automation system.
